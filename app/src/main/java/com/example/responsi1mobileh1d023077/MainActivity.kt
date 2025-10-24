@@ -1,18 +1,9 @@
 package com.example.responsi1mobileh1d023077
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.responsi1mobileh1d023077.databinding.ActivityMainBinding
-
 
 class MainActivity : ComponentActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -22,6 +13,7 @@ class MainActivity : ComponentActivity() {
         setContentView(binding.root)
 
         initLayout()
+        initListener()
     }
 
     private fun initLayout() {
@@ -39,5 +31,13 @@ class MainActivity : ComponentActivity() {
             it.tvLayout.setText(R.string.team_squad)
         }
     }
+
+    private fun initListener() {
+
+        binding.clubHistory.root.setOnClickListener {
+            startActivity(Intent(this, HistoryActivity::class.java))
+        }
+    }
+
 
 }
