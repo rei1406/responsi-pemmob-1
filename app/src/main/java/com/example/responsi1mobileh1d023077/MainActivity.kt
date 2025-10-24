@@ -37,6 +37,11 @@ class MainActivity : ComponentActivity() {
         binding.clubHistory.root.setOnClickListener {
             startActivity(Intent(this, HistoryActivity::class.java))
         }
+
+        binding.headCoach.root.setOnClickListener {
+            startActivity(Intent(this, CoachActivity::class.java))
+        }
+
     }
 
 
