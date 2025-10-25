@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import com.example.responsi1mobileh1d023077.databinding.ActivityMainBinding
+import com.example.responsi1mobileh1d023077.ui.activity.CoachActivity
+import com.example.responsi1mobileh1d023077.ui.activity.HistoryActivity
+import com.example.responsi1mobileh1d023077.ui.activity.SquadActivity
 
 class MainActivity : ComponentActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -40,6 +43,10 @@ class MainActivity : ComponentActivity() {
 
         binding.headCoach.root.setOnClickListener {
             startActivity(Intent(this, CoachActivity::class.java))
+        }
+
+        binding.teamSquad.root.setOnClickListener {
+            startActivity(Intent(this, SquadActivity::class.java))
         }
 
     }

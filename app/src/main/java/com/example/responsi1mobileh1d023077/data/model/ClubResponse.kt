@@ -1,6 +1,8 @@
 package com.example.responsi1mobileh1d023077.data.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class ClubResponse(
     @SerializedName("coach")
@@ -20,6 +22,7 @@ data class Coach(
     val dateOfBirth: String,
 )
 
+@Parcelize
 data class SquadMember(
     @SerializedName("id")
     val id: Int,
@@ -31,4 +34,4 @@ data class SquadMember(
     val dateOfBirth: String,
     @SerializedName("position")
     val position: String,
-)
+) : Parcelable
